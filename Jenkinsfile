@@ -10,4 +10,3 @@ pipeline {
                         steps {bash build-mariadb-image.bash }
                 }
 }
-}
