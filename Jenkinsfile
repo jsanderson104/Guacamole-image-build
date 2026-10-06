@@ -1,9 +1,17 @@
 pipeline {
-        agent kubernetes
+        agent {
+                label "podman"
+        }
         stages {
-                stage('Build Image')
+                stage('Build Guacamole Image')
                         steps {
-                                sh 'echo Hello'
+                                bash build-guacamole-image.bash
+                        }
+                
+                stage('Build MariaDB Image')
+                        steps {
+                                bash build-mariadb-image.bash
                         }
                 }
+        
 }
