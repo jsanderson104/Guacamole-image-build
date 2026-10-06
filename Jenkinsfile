@@ -3,10 +3,10 @@ pipeline {
                 label "podman"
         }
         stages {
-                stage('Build Guacamole Image')
+                stage ('Build Guacamole Image')
                         steps { bash build-guacamole-image.bash }
                 
-                stage('Build MariaDB Image')
+                stage ('Build MariaDB Image')
                         steps {bash build-mariadb-image.bash }
                 }
 }
