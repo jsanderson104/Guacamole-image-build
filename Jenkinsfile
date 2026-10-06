@@ -4,14 +4,10 @@ pipeline {
         }
         stages {
                 stage('Build Guacamole Image')
-                        steps {
-                                bash build-guacamole-image.bash
-                        }
+                        steps { bash build-guacamole-image.bash }
                 
                 stage('Build MariaDB Image')
-                        steps {
-                                bash build-mariadb-image.bash
-                        }
+                        steps {bash build-mariadb-image.bash }
                 }
-        
+}
 }
